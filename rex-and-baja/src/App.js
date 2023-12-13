@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
 function App() {
   return (
     <div className="App">
@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          <ListComponent></ListComponent>
         </p>
         <a
           className="App-link"
@@ -21,5 +22,25 @@ function App() {
     </div>
   );
 }
+function Test() {}
 
-export default App;
+
+const ListComponent: React.FC = () => {
+  const items: string[] = ['Item 1', 'Item 2', 'Item 3']; // Initial list items
+
+  return (
+    <div>
+      <h1>List Component</h1>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+
+
+// export default App;
+export {App,Test,ListComponent}
