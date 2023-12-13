@@ -39,6 +39,7 @@ const ListComponent: React.FC = () => {
     </div>
   );
 };
+
 function MyButton() {
   return (
     <button>
@@ -46,6 +47,7 @@ function MyButton() {
       </button>
   );
 }
+
 export default function MyApp() {
   return (
     <div>
